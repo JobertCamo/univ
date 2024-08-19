@@ -1,0 +1,214 @@
+body{
+    background: white;
+    display:grid;
+    place-content:center;
+    height:100vh;
+	background:black;
+}
+.container{
+    width:350px;
+    height:350px;
+    background: rgb(224, 169, 18);
+    border-radius:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position: relative;
+	box-shadow:
+    0 0 20px 10px #fff, 
+    0 0 50px 10px rgb(224, 222, 75),  
+    0 0 140px 10px #0ff;  
+}
+.earth{
+    position: absolute;
+    left: 8.5em;
+    width:100px;
+    height:100px;
+    background: rgb(31, 97, 14);
+    border-radius:100%;
+    animation: earth 3.8s linear infinite;
+    z-index: 1;
+	box-shadow:
+    0 0 10px 10px #c5defa,
+    0 0 50px 10px rgb(94, 129, 224),
+    0 0 140px 10px #0ff;
+}
+.mars{
+    position: absolute;
+    width:150px;
+    height:150px;
+    background: rgb(187, 97, 12);
+    border-radius:100%;
+    animation: rot 3.4s linear infinite;
+    animation-fill-mode: forwards;
+    z-index: 2;
+    left:2px;
+    top:2px;
+	box-shadow:
+    0 0 10px 10px #fff, 
+    0 0 50px 10px rgb(255, 198, 75),  
+    0 0 140px 10px #0ff;  
+}
+.jupiter{
+    position: absolute;
+    width:180px;
+    height:180px;
+    background: rgb(21, 119, 184);
+    border-radius:100%;
+    animation: rot 3.5s linear infinite;
+    z-index: 2;
+    left:2em;
+    top:14em;
+	box-shadow:
+    0 0 10px 10px #fff, 
+    0 0 50px 10px #f0f,  
+    0 0 140px 10px #0ff;  
+}
+.uranus{
+    position: absolute;
+    width:180px;
+    height:180px;
+    background: rgb(162, 214, 247);
+    border-radius:100%;
+    animation: rots 4s linear infinite;
+    z-index: 2;
+    left:6em;
+    top:8em;
+	box-shadow:
+    0 0 10px 10px #fff, 
+    0 0 50px 10px #f0f,  
+    0 0 140px 10px #0ff;  
+}
+.saturn{
+    position: absolute;
+    width:180px;
+    height:180px;
+    background: rgb(245, 199, 74);
+    border-radius:100%;
+    animation: saturn 4.5s linear infinite;
+    z-index: 2;
+    left:13em;
+    top:-1em;
+	box-shadow:
+    0 0 10px 5px #fff, 
+    0 0 50px 20px #f0f,  
+    0 0 140px 20px #0ff;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ring-m{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width:250px;
+    height:250px;
+    rotate: x 70deg;
+    border-radius:100%;
+    border:3em solid rgb(240, 230, 211);
+    box-shadow:
+    0 0 10px 10px #fff, 
+    0 0 50px 10px #f0f,  
+    0 0 140px 10px #0ff;  
+}
+.ring-1{
+    position: absolute;
+    top: -8.1em;
+    width:163px;
+    height:360px;
+    background: rgb(245, 199, 74);
+
+    border-radius:100%;
+    
+}
+@keyframes earth {
+    0%{
+        transform:translate(0em,0em);
+        z-index: 1;
+        scale:1;
+    }
+    50%{
+        transform:translate(-40em,0em);
+        z-index: -1;
+        scale:.3;
+    }
+    60%{
+        transform:translate(27em,0em);
+        z-index: -1;
+        scale:.3;
+    }
+    65%{
+        transform:translate(37em,0em);
+        z-index: -1;
+        scale:.3;
+    }
+}
+@keyframes rot {
+    0%{
+        transform:translate(0em,0em);
+        z-index: 1;
+        scale:1;
+    }
+    50%{
+        transform:translate(-46em,0em);
+        z-index: -1;
+        scale:.2;
+    }
+    60%{
+        transform:translate(27em,0em);
+        z-index: -1;
+        scale:.2;
+    }
+    65%{
+        transform:translate(67em,0em);
+        z-index: -1;
+        scale:.2;
+    }
+}
+
+@keyframes rots {
+    0%{
+        transform:translate(0em,0em);
+        z-index: 2;
+        scale:1;
+    }
+    50%{
+        transform:translate(-76em,0em);
+        z-index: -1;
+        scale:.2;
+    }
+    60%{
+        transform:translate(27em,0em);
+        z-index: -1;
+        scale:.2;
+    }
+    65%{
+        transform:translate(67em,0em);
+        z-index: -1;
+        scale:.2;
+    }
+}
+
+@keyframes saturn {
+    0%{
+        transform:translate(0em,0em);
+        z-index: 3;
+        scale:1;
+    }
+    50%{
+        transform:translate(-130em,0em);
+        z-index: -1;
+        scale:.2;
+    }
+    60%{
+        transform:translate(27em,0em);
+        z-index: -1;
+        scale:.2;
+    }
+    65%{
+        transform:translate(67em,0em);
+        z-index: -1;
+        scale:.2;
+    }
+}
